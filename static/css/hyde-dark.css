@@ -74,14 +74,18 @@ html {
   }
 }
 
+h1,h2,h3,h4,h5,h6 {
+	color: #ccc;
+}
+
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #222;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
+  color: #222;
   margin-top: 0;
   font-size: 2.25rem;
   font-weight: 400;
@@ -120,6 +124,8 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #000000;
+  color: #ccc;
 }
 
 footer {
@@ -147,7 +153,7 @@ footer {
 }
 
 .img-headshot {
-  border: 6px solid #fff;
+  border: 6px solid #222;
   height: 180px;
   width: 180px;
 }
@@ -160,12 +166,12 @@ footer {
 
 .sidebar {
   background-color: #336699;
-  color: #fff;
+  color: #222;
 }
 
 .sidebar a,
 .sidebar-about h1 {
-  color: #fff;
+  color: #222;
 }
 
 footer a,
@@ -187,7 +193,7 @@ footer a,
 
 .read-more-link a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #222;
   background-color: #336699;
 }
 
@@ -268,13 +274,13 @@ ul.posts li,
 }
 
 .pagination li a:hover {
-  color: #fff;
+  color: #222;
   background-color: #336699;
   opacity: 0.75;
 }
 
 .pagination li.active a {
-  color: #fff;
+  color: #222;
   background-color: #336699;
 }
 
