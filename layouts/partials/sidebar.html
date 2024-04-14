@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar" data-pagefind-ignore="all">
   <div class="container">
     <div class="sidebar-about">
       {{ with .Site.Params.gravatar }}
@@ -40,7 +40,8 @@
     <section class="social-icons">
       {{ range $item := .Site.Params.socialIcons }}
       <a href="{{ $item.url }}" rel="me" title="{{ $item.title }}" target="_blank">
-        <i class="fab {{ $item.icon }}" aria-hidden="true"></i>
+        <!-- i class="{{ $item.icon }}" aria-hidden="true"></i -->
+	<img src='/fa/svgs/{{ $item.icon }}.svg' style='width:32px; height:32px; display:inline; filter:invert(100%)'>
       </a>
       {{ end }}
     </section>
