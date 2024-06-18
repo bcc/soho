@@ -1,7 +1,8 @@
 <footer>
   <div>
     <p>
-      &copy; {{ $.Site.Params.Copyright }} {{ now.Format "2006"}}
+      &copy; {{ $.Site.Params.Copyright }} {{ now.Format "2006"}} {{ with .GitInfo }}- {{ .AbbreviatedHash }} {{ end }}
+
 
       {{ with $.Site.Params.License -}}
       &middot; <a href="{{ $.Site.Params.licenseURL }}" target="_blank">{{ . | safeHTML }}</a>
