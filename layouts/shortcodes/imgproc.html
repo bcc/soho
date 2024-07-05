@@ -1,0 +1,21 @@
+{{ $images := .Page.Resources.ByType "image" }}
+{{ $original := $images.GetMatch (printf "%s*" (.Get 0)) }}
+{{ $command := .Get 1 | default "Resize" }}
+{{ $options := .Get 2 | default "smart" }}
+{{ $caption := .Get 3 | default "" }}
+{{ $options := print "1000x " $options}}
+{{ if eq $command "Fit"}}
+{{ .Scratch.Set "image" ($original.Fit $options) }}
+{{ else if eq $command "Resize"}}
+{{ .Scratch.Set "image" ($original.Resize $options) }}
+{{ else if eq $command "Fill"}}
+{{ .Scratch.Set "image" ($original.Fill $options) }}
+{{ else }}
+{{ $original.ResourceType }}
+{{ errorf "Invalid image processing command: Must be one of Fit, Fill or Resize."}}
+{{ end }}
+{{ $image := .Scratch.Get "image" }}
+<figure>
+	<img src="{{ $image.RelPermalink }}">
+	<figcaption>{{ with .Inner }}{{ . }}{{ else }}{{ $caption }}{{ end }}</figcaption>
+</figure>   
