@@ -26,7 +26,12 @@
 
   <link type="text/css"
         rel="stylesheet"
-        href="{{ `css/hyde.css` | relURL }}">
+        href="{{ `css/hyde-light.css` | relURL }}">
+
+        <link type="text/css"
+        rel="stylesheet"
+        href="{{ `css/hyde-dark.css` | relURL }}"
+        media="(prefers-color-scheme: dark)">
 
   {{ partial "theme-color.html" . }}
 
@@ -58,6 +63,8 @@
   {{ range $.Site.Params.customJs -}}
   <script src="{{ . | relURL }}"></script>
   {{- end}}
+
+  <script src="{{ `js/colour-toggle.js` | relURL }}"></script>
 
 </body>
 </html>

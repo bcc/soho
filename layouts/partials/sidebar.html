@@ -40,10 +40,16 @@
     <section class="social-icons">
       {{ range $item := .Site.Params.socialIcons }}
       <a href="{{ $item.url }}" rel="me" title="{{ $item.title }}" target="_blank">
-        <!-- i class="{{ $item.icon }}" aria-hidden="true"></i -->
-	<img src='/fa/svgs/{{ $item.icon }}.svg' style='width:32px; height:32px; display:inline; filter:invert(100%)'>
+	      <img src='/fa/svgs/{{ $item.icon }}.svg' style='width:32px; height:32px; display:inline; filter:invert(100%)'>
       </a>
       {{ end }}
+    </section>
+
+    <section></section>
+      <a class="colour-toggle" href="javascript:toggleColorScheme();">
+        <span id="toggle-light">light mode</span>
+        <span id="toggle-dark">dark mode</span>
+      </a>
     </section>
   </div>
 </aside>

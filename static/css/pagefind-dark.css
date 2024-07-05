@@ -1,0 +1,12 @@
+@media (prefers-color-scheme: dark) {
+:root {
+  --pagefind-ui-primary: #aaa;
+  --pagefind-ui-text: #aaa;
+  --pagefind-ui-background: #393939;
+  --pagefind-ui-border: #393939;
+  --pagefind-ui-tag: #393939;
+}
+.pagefind-ui mark {
+    background-color: #336699;
+}
+}
